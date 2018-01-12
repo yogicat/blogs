@@ -1,5 +1,5 @@
 # Site settings
-baseurl = "https://github.com/yogicat/yogicat.github.io.git/"
+baseurl = "/"
 languageCode = "en"
 title = "site title"
 theme = "hugo-theme-cactus-plus"

@@ -3,97 +3,97 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://github.com/yogicat/yogicat.github.io.git/posts/creating-a-new-theme/</loc>
+    <loc>/posts/creating-a-new-theme/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://github.com/yogicat/yogicat.github.io.git/posts/migrate-from-jekyll/</loc>
+    <loc>/posts/migrate-from-jekyll/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://github.com/yogicat/yogicat.github.io.git/about/</loc>
+    <loc>/about/</loc>
     <lastmod>2015-06-20T14:02:37+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://github.com/yogicat/yogicat.github.io.git/posts/goisforlovers/</loc>
+    <loc>/posts/goisforlovers/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://github.com/yogicat/yogicat.github.io.git/posts/hugoisforlovers/</loc>
+    <loc>/posts/hugoisforlovers/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://github.com/yogicat/yogicat.github.io.git/categories/</loc>
+    <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://github.com/yogicat/yogicat.github.io.git/tags/development/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/yogicat/yogicat.github.io.git/categories/development/</loc>
+    <loc>/tags/development/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://github.com/yogicat/yogicat.github.io.git/tags/go/</loc>
+    <loc>/categories/development/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://github.com/yogicat/yogicat.github.io.git/tags/golang/</loc>
+    <loc>/tags/go/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://github.com/yogicat/yogicat.github.io.git/categories/golang/</loc>
+    <loc>/tags/golang/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://github.com/yogicat/yogicat.github.io.git/tags/hugo/</loc>
+    <loc>/categories/golang/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://github.com/yogicat/yogicat.github.io.git/posts/</loc>
+    <loc>/tags/hugo/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://github.com/yogicat/yogicat.github.io.git/tags/</loc>
+    <loc>/tags/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://github.com/yogicat/yogicat.github.io.git/tags/templates/</loc>
+    <loc>/tags/templates/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://github.com/yogicat/yogicat.github.io.git/tags/themes/</loc>
+    <loc>/tags/themes/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://github.com/yogicat/yogicat.github.io.git/</loc>
+    <loc>/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
