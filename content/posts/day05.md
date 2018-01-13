@@ -1,7 +1,13 @@
 ---
-title: "Day 05"
-date: 2018-01-11T18:46:30+09:00
-draft: true
+author: "yogicat"
+date: 2018-01-13
+linktitle: Day 05
+menu:
+  main:
+    parent: post
+title: Day 05
+description: Front-End Dev School
+weight: 10
 ---
 
 # day 05

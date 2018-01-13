@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<meta name="author" content="dahe oh">
+		<meta name="description" content="daily log">
+		<meta name="generator" content="Hugo 0.32.3" />
+		<title>Day 05 &middot; everyday</title>
+		
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='/'> <span class="arrow">←  </span>Home</a>
+	
+	<a href='/posts'>Archive</a>
+	<a href='/tags'>Tags</a>
+	<a href='/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Day 05
+                    </h1>
+                    <h2 class="headline">
+                    Jan 13, 2018 00:00
+                    · 475 words
+                    · 3 minute read
+                      <span class="tags">
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<h1 id="day-05">day 05</h1>
+
+<h2 id="tl-dr-week-summary">tl;dr : week summary</h2>
+
+<ul>
+<li>Quicksort</li>
+<li>Stack / Queue</li>
+<li>TCP / UDP (가래떡)</li>
+<li>OSI 7 Layers</li>
+<li>Coockie
+
+<ul>
+<li>브라우저상에 남는 것</li>
+</ul></li>
+<li>Session
+
+<ul>
+<li>몇분동안 유지해서 정보를 잡아두는 것</li>
+<li>연속적인 정보를 쌓기위해 쓰는 것</li>
+</ul></li>
+<li>Client vs Server</li>
+<li>URI / URL / URN</li>
+<li>RESTFul : URI + Method
+
+<ul>
+<li>주소로 요청을 할 수 있다.</li>
+<li>표준이 없고 method 4개뿐</li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h2 id="teacher-says">Teacher says</h2>
+
+<blockquote>
+<p>Hand Coding!
+Brain Compile!
+Eye Debugging!</p>
+</blockquote>
+
+<h2 id="web-programming">Web Programming</h2>
+
+<p><strong>Static vs Dynamic</strong>
+- Static : Each contents have to have an each page
+- Dynamic : Display different content from the same source code.Interaction</p>
+
+<h3 id="transformation-of-web-development-pattern">Transformation of Web Development Pattern</h3>
+
+<p>Static -&gt; Static Client + Dynamic Server -&gt; Dynamic Client &amp; Server <strong>(now)</strong></p>
+
+<pre><code class="language-html">    &lt;html&gt;
+    &lt;head&gt;
+    &lt;script src=&quot;https://unpkg.com/vue&quot;&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h1&gt;{{ header }}&lt;/h1&gt;   //interaction with server
+    &lt;div id=&quot;app&quot;&gt;
+    {{ message }}
+    &lt;/div&gt;
+    &lt;script&gt;
+    var app = new Vue({
+    el: '#app',
+    data: {
+        message: '안녕하세요 Vue!'
+    }
+    })
+    &lt;/script&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre>
+
+<hr />
+
+<h2 id="web-browser">Web Browser</h2>
+
+<ul>
+<li>parsing : reading / processing the HTML</li>
+<li>rendering : parses HTML, CSS and displays the content on the screen</li>
+</ul>
+
+<p>Mosaic / Netscape / Internet Explorer/ FireFox / Chrome(2008)</p>
+
+<p>parsing 과 rendering =&gt; 연산 =&gt; 연산은 엔진이 중요! Chrome에 내장된 v8 Enging이 역사적으로 중요한 역할(js를 한단계 업하는 역할을 함)</p>
+
+<p><strong>PWA : Progressive Web Apps</strong>
+notification, offline available (via service tools)
+Aliexpress mobile site homescreen add - works just like an app</p>
+
+<p><strong>AMP : <a href="https://en.wikipedia.org/wiki/Accelerated_Mobile_Pages">The Accelerated Mobile Pages Project</a></strong>
+ is an open-source website publishing technology designed to improve the performance of web content and advertisements. The AMP Project led by Google is a competitor to Facebook&rsquo;s Instant Articles,[1] and includes several other large search, social and web publishing platforms around the world.</p>
+
+<h2 id="web-architecture">Web Architecture</h2>
+
+<ul>
+<li>Client</li>
+<li>Server<br /></li>
+<li>Business Layer</li>
+<li>Data Layer</li>
+</ul>
+
+<hr />
+
+<h3 id="framework">Framework</h3>
+
+<p>복잡한 절차를 하나의 기능으로 함축시켜 자동화 시켜주는 역할</p>
+
+<ul>
+<li>AngularJS</li>
+<li>React.js</li>
+<li>Vue.js</li>
+</ul>
+
+<hr />
+
+<h2 id="database">Database</h2>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Relational_database_management_system">RDBMS</a> : MySQL,..</li>
+<li>noSQL : MongoDB,&hellip;</li>
+</ul>
+
+<hr />
+
+<h2 id="uri-url-urn">URI, URL, URN</h2>
+
+<pre><code>http://www.google.com/post/how-to
+프로토콜       도메인       패쓰 파일명
+</code></pre>
+
+<ul>
+<li>uri : information (file path + info)</li>
+<li>url : locator (file path)</li>
+<li>urn : (통신 정보 없음)</li>
+<li>github과 연결된 public폴더 는 root page -&gt; 주소를 무조건 public에 index.html 을 참조. 없으면 에러!</li>
+</ul>
+
+<hr />
+
+<h2 id="api">API</h2>
+
+<ul>
+<li>하드웨어랑 어플리케이션의 소통을 도와주는 도구</li>
+<li><strong>WebAPI</strong> 웹서버,브라우저를 위한 API</li>
+</ul>
+
+<hr />
+
+<h2 id="xml">xml</h2>
+
+<ul>
+<li>느리고 불안정 , archive에는 유용</li>
+<li>podcast, soundcloud</li>
+</ul>
+
+<hr />
+
+<h3 id="rest-api">REST API</h3>
+
+<ul>
+<li>HTTP URI + HTTP method</li>
+<li><strong>스펙없이</strong> 기존의 HTTP이용해 요정 처리가능</li>
+<li>xml의 단점을 보안할 수 있음</li>
+<li>Get, Put, Post, Delete / Read, Create, Update, Delete</li>
+<li><strong>표준이 없다</strong> soon to be gone&hellip;.
+<br /></li>
+</ul>
+
+<pre><code>
+  https://finance.yahoo.com/lookup?s=GOOGLE
+                                    쿼리 
+</code></pre>
+
+<hr />
+
+<h3 id="graphql">GraphQL</h3>
+
+<ul>
+<li>send queries to get exactly the data you’re looking for in one request</li>
+<li>legacy를 살려서 작업할 수 있다.</li>
+</ul>
+
+<hr />
+
+<h4 id="toc_14">+++</h4>
+
+<ul>
+<li><strong>A legacy platform</strong>, also called a legacy operating system, is an operating system (OS) no longer in widespread use, or that has been supplanted by an updated version of earlier technology.</li>
+<li><strong><a href="https://getuikit.com/">uikit</a></strong> : Webpack Css Framework</li>
+<li><strong><a href="https://purecss.io/">Purecss</a></strong> : Css Framework made by Yahoo</li>
+<li>Node를 사용해보고 deploy까지 해보면 좋은 경험</li>
+<li>이 세상 역사상 모든 OS와 언어들을 박물관으로 만들면 어떤 모습일까 굉장히 궁금하다.(Black Mirror의 Black Museum 같은 모습일까?)</li>
+<li><strong><a href="https://yhatt.github.io/marp/">marp</a></strong> : Markdown presentation</li>
+<li><strong>1970-01-01</strong></li>
+</ul>
+
+                </section>
+            </article>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'yogicat'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/nodejh">
+        <i class="fa fa-facebook-square"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.github.com/nodejh">
+        <i class="fa fa-github-square"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2018 <i class="fa fa-heart" aria-hidden="true"></i> dahe oh
+    
+    </p>
+    
+</footer>
+
+        </section>
+
+        <script src="/js/jquery-2.2.4.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'your_google_analytics_id', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+    </body>
+</html>

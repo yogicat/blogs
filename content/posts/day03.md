@@ -1,9 +1,14 @@
 ---
-title: "Day 03"
-date: 2018-01-11T18:46:30+09:00
-draft: true
+author: "yogicat"
+date: 2018-01-11
+linktitle: Day 03
+menu:
+  main:
+    parent: post
+title: Day 03
+description: Front-End Dev School
+weight: 10
 ---
-
 
 # day 03
 #fastcamp

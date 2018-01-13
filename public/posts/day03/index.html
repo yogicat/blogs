@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<meta name="author" content="dahe oh">
+		<meta name="description" content="daily log">
+		<meta name="generator" content="Hugo 0.32.3" />
+		<title>Day 03 &middot; everyday</title>
+		
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='/'> <span class="arrow">←  </span>Home</a>
+	
+	<a href='/posts'>Archive</a>
+	<a href='/tags'>Tags</a>
+	<a href='/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Day 03
+                    </h1>
+                    <h2 class="headline">
+                    Jan 11, 2018 00:00
+                    · 948 words
+                    · 5 minute read
+                      <span class="tags">
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<h1 id="day-03">day 03</h1>
+
+<p>#fastcamp</p>
+
+<h4 id="cli-command-line-interface">CLI : Command line interface</h4>
+
+<hr />
+
+<h3 id="terminal">terminal</h3>
+
+<p><a href="https://www.davidbaumgold.com/tutorials/command-line/">Getting to Know the Command Line | David Baumgold</a></p>
+
+<p>$ : ready to shell 쉘커맨드 입력 준비 됬음
+$ npm install ~~~~ : shell을 이용해서 nom install<del>입력해라
+~$ : login user’s top priority folder (최상위폴더)
+**root@</del>~ : super user / 갓 역할 / 다 해치울 수 있어**</p>
+
+<pre><code>- up arrow  : go through past lines.
+- ls : List -&gt; show all the files and folders.
+- cd : Change Directory 
+- cd .. : go up 상위폴더 
+- touch : make file -&gt; touch text.txt
+- mkdir : make directory -&gt; mkdir folder
+- rm : delete individual files -&gt; rm blue.txt (delete blue.txt)
+- rm -rf : delete directory(folder)
+- rm -rf/ : delete entire workspace
+- cp : copy -&gt; cp hello.txt ..(or folder) // .. means 상위
+**-** dash means add options
+- ls -l : 한줄씩 보여줘(리스트로)
+- touch .hello.py -&gt; 파일명 앞에 쩜 붙이면 숨긴파일
+- ls -al : 모든 파일 보여줘(숨긴파일 포함)
+- mv .hello.py dev -&gt; hello.py 를 dev 로 이동
+- mv ./.hello.py ./hello.py -&gt; ./ 현재폴더
+- exit : 쉘 종료 (터미널 종료)
+- cat : 안에 텍스트 볼때 사용 -&gt; cat hello.text
+</code></pre>
+
+<p><strong>bash / git bash 는 다양한 권한이 없음</strong></p>
+
+<p>/ windows는 bash가 없었는데 windows10부터는 생겨서
+이제 putty 를 유용하게 할 수 있다고 함.</p>
+
+<h3 id="chmod-change-mode">chmod : change mode</h3>
+
+<p>read write execute</p>
+
+<pre><code>drwxr-xr-x   5 ohbbung  staff       160 Jan 10 10:11 Code
+
+d + r w x r - x r - x  
+     1 1 1 1 0 1 1 0 1
+
+나 그룹 others
+
+</code></pre>
+
+<p><code>$ chmod [옵션] (8진수) (파일명)</code></p>
+
+<pre><code>0: 000
+1: 001
+2: 010
+3: 011
+4: 100
+5: 101
+6: 110
+7: 111
+
+750 : 
+760 : 나(rwx) + 그룹(rw-) + others(---)
+</code></pre>
+
+<h3 id="vim">VIM</h3>
+
+<blockquote>
+<p>vim은 리눅스메모장 같은 개념인데 적응하기 어려움/<br />
+리눅스 계열 텍스트 에디터 (vim, emacs)<br />
+shell에서(터미널, 커멘드) 가능</p>
+</blockquote>
+
+<pre><code>(연결프로그램) (열고싶은 파일명)
+(program) (filename)
+python hello.py   //python을 이용해서 hello.py를 열자
+vi hello.txt
+</code></pre>
+
+<blockquote>
+<p>vim 에는 3가지 모드<br />
+수정모드(insert mode) / 명령모드(normal mode) / visual mode</p>
+</blockquote>
+
+<p><code>i</code>  -&gt; insert mode 로 변경 -&gt; text 입력가능
+<code>[esc키]</code> -&gt; insert mode 끌 수 있음 back to normal mode
+<code>y</code> -&gt; yank 복사
+<code>d</code> -&gt; delete
+<code>dd</code> -&gt; 잘라내기
+<code>p</code> -&gt; paste
+<code>:wq</code> -&gt; 저장하고 나가기
+<code>:q</code> -&gt; 나가기 (저장안해서 경고창!)
+<code>:q!</code> -&gt; 저장안하고 나가기(했던거 무시)</p>
+
+<h3 id="git">git</h3>
+
+<blockquote>
+<p><strong>VCS : Version Control System</strong><br />
+source code management</p>
+</blockquote>
+
+<ul>
+<li>fast</li>
+<li>simple structure</li>
+<li>분산형 저장소 지원</li>
+<li>비선형적 개발(수천개의  branch)가능 / 각각 브랜치로 작업하고 합칠 수 있어</li>
+<li>인터넷 연결 업을 때도 작업할 수 있다. (얼마나 어떻게 했는지 나중에 wifi 연결시 나타남)</li>
+</ul>
+
+<p><img src="Screen%20Shot%202018-01-10%20at%2021.12.55.png" alt="" /></p>
+
+<hr />
+
+<h4 id="inside-git">inside git</h4>
+
+<ol>
+<li>Blob : 파일을 blob이라고 부름</li>
+<li>Tree : 파일을 모아놓은 것</li>
+<li>Commit : 파일에 대한 정보들 (라벨,커맨트)</li>
+</ol>
+
+<hr />
+
+<h4 id="process">process</h4>
+
+<blockquote>
+<p>작업한다 -&gt;<br />
+-&gt; index 에 수정한 모든 파일 올리고(동작가능해야함) -&gt;<br />
+-&gt; commit메세지 달아서 local repository 에 올리고 -&gt;<br />
+-&gt; 서버에 올린다 (remote repository)</p>
+</blockquote>
+
+<hr />
+
+<h4 id="git-test">git test</h4>
+
+<p><img src="Screen%20Shot%202018-01-10%20at%2012.28.09.png" alt="" />
+new repo 만들고 주소 복사
+<code>https://github.com/username/first-repo.git</code></p>
+
+<p><code>dev/first-repo</code> -&gt; 여기에 git 실행
+<strong>github repo 이름과 로컬 폴더(first-repo) 이름이 같아야 편리</strong></p>
+
+<p><code>git init</code> -&gt; 로컬에 생성 (로컬에 index , local repo생성)</p>
+
+<p><code>git status</code> -&gt; 현재 git 상태 체크 (항상 자주 사용할것)</p>
+
+<p><img src="Screen%20Shot%202018-01-10%20at%2012.33.59.png" alt="" />
+// git이 처음 보는 파일이다!! git add 하세요
+<code>git add hello.txt</code>
+<code>git commit -</code></p>
+
+<pre><code>git commit -m “add hello.txt”
+-&gt; 현재창에서 입력할 수 있어
+</code></pre>
+
+<blockquote>
+<p>add / edit / delete 현재형으로 사용</p>
+</blockquote>
+
+<pre><code>//작성자 인포 
+git config —global user.name “ohdayoda”
+git config —global user.email “ohdayoda@gmail.com”
+
+</code></pre>
+
+<p><code>git config --list</code> -&gt; 여기에 user.name  , user.email 제대로 입력됬는지 확인</p>
+
+<pre><code>//받는사람
+//origin 은 url을 부를 이름
+git remote add origin https://github.com/ohdayoda/first-repo.git
+
+</code></pre>
+
+<p><code>git push origin master</code>
+&gt; origin 에 master branch로 보내라.<br />
+&gt; my origin(내 저장소) / remote origin(중앙저장소)</p>
+
+<p><img src="Screen%20Shot%202018-01-10%20at%2012.41.01.png" alt="" /></p>
+
+<p><img src="Screen%20Shot%202018-01-10%20at%2012.36.08.png" alt="" /></p>
+
+<hr />
+
+<h3 id="git-in-short">git in short</h3>
+
+<p>Git Setting with Github
+1. GitHub에서 new repo 만들고 주소 기억해놓는다
+2. local에서 경로 만들고 파일 만들고
+3. <code>git init</code> 으로 git 실행
+4. <code>git add thisfile.txt</code>  git에 파일을 올린다(로컬)
+5. <code>git commit --m &quot;add new file&quot;</code> git에 레이블링을 하고 저장(로컬)
+6. <code>git config —global user.name &quot;username&quot;</code> -&gt; 처음의 경우 아이디 세팅
+<code>git config —global user.email “username@gmail.com”</code>
+7. <code>git remote add origin https://github.com/&lt;username&gt;/first-repo.git</code>
+-&gt; github 서버와 연결
+8. <code>git push origin master</code> -&gt; git을 올린다.</p>
+
+<ul>
+<li>git add / 임시 공간에 올려놓는다</li>
+<li>git commit —m “커밋내용”/ 라벨링을 하고 로컬에 저장</li>
+<li>git push master origin/ 저장소에 올린다</li>
+</ul>
+
+<p><img src="Screen%20Shot%202018-01-10%20at%2014.14.19.png" alt="" /></p>
+
+<h3 id="git-삭제하기">git 삭제하기</h3>
+
+<ol>
+<li><code>rm -rf .git</code> -&gt; git을 삭제</li>
+<li><code>rm -rf 로컬폴더</code> -&gt; git로컬 폴더 삭제</li>
+<li>GitHub 에서 삭제</li>
+</ol>
+
+<h3 id="git-repo-빠르게-사용하기-이미-존재하는-git-repo-사용하기">git repo 빠르게 사용하기 (이미 존재하는 git repo 사용하기)</h3>
+
+<h4 id="github-repo-만들기">github repo 만들기</h4>
+
+<ol>
+<li><p>repo 만들때 read me 추가 라이센스 추가 gitignore추가
+<img src="Screen%20Shot%202018-01-10%20at%2014.40.11.png" alt="" />
+&gt; 다양한 파일 추가된 것 확인 할 수 있다.<br />
+&gt; 주소 복사해서 로컬에서 연결</p></li>
+
+<li><p>GitHub repo 가져오기
+<img src="Screen%20Shot%202018-01-10%20at%2014.42.12.png" alt="" />
+<img src="Screen%20Shot%202018-01-10%20at%2014.42.52.png" alt="" /></p></li>
+
+<li><p>what is .gitignore?</p></li>
+
+<li><p>change default editor setting
+<code>git config --global core.editor &quot;vim&quot;</code> -&gt; 빔으로 세팅
+<code>git config --list</code> -&gt; 각종 세팅값 확인 가능</p></li>
+
+<li><p><code>git commit</code> -&gt; vim 열린다</p></li>
+</ol>
+
+<p><img src="Screen%20Shot%202018-01-10%20at%2014.55.06.png" alt="" />
+첫번째 줄 : 타이틀(중요)
+띄고 띄고 내용 입력</p>
+
+<ol>
+<li><p><code>git push origin master</code>
+-&gt; 로그인 없이도 자동으로 올라감 ( github에서 가져왔기때문에)</p></li>
+
+<li><p>github 에서 확인 가능
+<img src="Screen%20Shot%202018-01-10%20at%2014.58.53.png" alt="" /></p></li>
+</ol>
+
+<hr />
+
+<h3 id="github-blog-만들기">GitHub blog 만들기</h3>
+
+<ol>
+<li>repo name : <username>.github.io</li>
+<li><username>.github.io</li>
+</ol>
+
+<p>( jekyll, hexo, hugo 다른 툴 이용해서 블로그 쉽게 만들 수 있음)</p>
+
+<hr />
+
+<h3 id="branch">branch</h3>
+
+<ul>
+<li>master branch -&gt; 프로젝트 매니저들이 여기</li>
+<li>hot fixed -&gt; master 에 문제 해결 (패치)</li>
+<li>release branch  -&gt; 프로젝트 마스터들이 여기</li>
+<li>develop branch   -&gt; 개발자는 여기에서 작업 -&gt; branch를 엮어서 <strong>기능</strong> 별로 개발</li>
+<li>pull -&gt;  develop변경사항을 땡겨온다.</li>
+</ul>
+
+<h3 id="git-branch">git branch</h3>
+
+<dl>
+<dt><code>git checkout -b stem</code>  -&gt; 이렇게 할때 develop 에서 만들면 develop 아래 귀속 / master로 와서 만들어야 develop - stem 같은 레벨</dt>
+</dl>
+
+<dl>
+<dt>게 할때 develop 에서 만들면 develop 아래 귀속 / master로 와서 만들어야 develop - stem 같은 레벨</dt>
+</dl>
+
+<p>::*있는 곳이 나의 위치::</p>
+
+<h3 id="non-linear-개발">non linear 개발</h3>
+
+<blockquote>
+<p>git-flow strategy</p>
+</blockquote>
+
+<p><img src="Screen%20Shot%202018-01-10%20at%2015.48.25.png" alt="" />
+develop에서 작업 후 git add , git commit 하게되면 한 시점 앞어감
+따라서 master에서는 brandnewbranch.md 확인할 수 없음</p>
+
+<p>-&gt; master 로 돌아와서,<code>git merge develop</code> 로 master와 develop 합체
+-&gt; always develop에서 작업.</p>
+
+<p>-&gt; <code>git pull origin master</code> -&gt; 깃허브에서 끌어오기
+-&gt; <code>git remote add remoteorigin 주소</code></p>
+
+<hr />
+
+<p>-&gt; <code>rm -rf dev</code> 지우기</p>
+
+                </section>
+            </article>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'yogicat'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/nodejh">
+        <i class="fa fa-facebook-square"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.github.com/nodejh">
+        <i class="fa fa-github-square"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2018 <i class="fa fa-heart" aria-hidden="true"></i> dahe oh
+    
+    </p>
+    
+</footer>
+
+        </section>
+
+        <script src="/js/jquery-2.2.4.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'your_google_analytics_id', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<meta name="author" content="dahe oh">
+		<meta name="description" content="daily log">
+		<meta name="generator" content="Hugo 0.32.3" />
+		<title>Day 02 &middot; everyday</title>
+		
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='/'> <span class="arrow">←  </span>Home</a>
+	
+	<a href='/posts'>Archive</a>
+	<a href='/tags'>Tags</a>
+	<a href='/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Day 02
+                    </h1>
+                    <h2 class="headline">
+                    Jan 10, 2018 00:00
+                    · 851 words
+                    · 4 minute read
+                      <span class="tags">
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<h1 id="day-02">day 02</h1>
+
+<p>#fastcamp</p>
+
+<h3 id="markdown">Markdown</h3>
+
+<p>readme.md
+<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet · adam-p/markdown-here Wiki · GitHub</a>
+<a href="https://guides.github.com/features/mastering-markdown/">Mastering Markdown · GitHub Guides</a></p>
+
+<hr />
+
+<h2 id="의사코드-알고리즘-자료구조">의사코드 . 알고리즘 . 자료구조</h2>
+
+<blockquote>
+<p>Pseudocode / Algorithm / Data Structure</p>
+</blockquote>
+
+<hr />
+
+<h3 id="pseudocode">Pseudocode</h3>
+
+<blockquote>
+<p>like coding ideation , sketch<br />
+<a href="https://en.wikipedia.org/wiki/Pseudocode">Pseudocode - Wikipedia</a></p>
+</blockquote>
+
+<ul>
+<li>no guide line</li>
+<li>but your own  guide line is needed (i think)</li>
+</ul>
+
+<pre><code class="language-js">1. 올드폰 == true
+2. 폰이 망가졌다면,
+    1. 100만원 이상 있을 때,
+        1. 애플을 좋아한다면, 아이폰을 산다.
+        2. 애플을 좋아하지 않는다면, 갤럭시를 산다.
+    2. 100만원 미만 있을 때, 저가폰을 산다.
+3. 폰이 망가지지 않았다면,
+    1. 사용한지 2년 이상, 
+        1. 100만원 이상 있을 때, 아이폰을 산다.
+        2. 100만원 미만 일때, 저가폰을 산다.
+    2. 사용한지 2년 미만, 기다린다.
+
+//try to use ENGLISH
+</code></pre>
+
+<p><img src="DACE8810-97E2-4750-8F9C-7E3D4F5D25C8.png" alt="" /></p>
+
+<h4 id="fizzbuzz-challenge">FizzBuzz Challenge</h4>
+
+<p>#later
+<a href="https://www.hackerrank.com/challenges/fizzbuzz/problem">hackerrank:fizzbuzz</a></p>
+
+<pre><code class="language-js">for 1 to n
+    if number / 3 is 0 (3의 배수)
+        if number / 5 is 0  3과 5의 배수
+            print &quot;fizzbuzz&quot;
+        else 
+            print &quot;fizz&quot;
+    else if number / 5 is 0
+        print &quot;buzz&quot;
+    else 
+        print number
+
+//15 = 3과 5의 배수
+
+for (var i = 1; i &lt;= 100; i ++){
+    var string = '';
+    if ( i % 3 == 0 ) 
+}
+</code></pre>
+
+<h4 id="calculating-tax">Calculating Tax</h4>
+
+<p><strong>Sketch version</strong>
+1. 제품 가격 입력 <strong>받는다</strong>
+2. 구매 나라 입력 <strong>받는다</strong>
+    1. 나라 = 한국, 가격 + 가격*0.1 를 <strong>출력</strong>한다.
+    2. 나라 = 일본, 가격 + 가격*0.08 를 <strong>출력</strong>한다.
+    3. 나라 = 미국, &ldquo;주 마다 다름&rdquo;을 <strong>출력</strong>한다.
+    4. 나라 = 영국, 가격 + 가격*0.2 를 <strong>출력</strong>한다.
+    5. 나라 = 알수없음 &ldquo;알 수 없는 나라&rdquo;를 <strong>출력</strong>한다.</p>
+
+<p><strong>Solution</strong>
+1. <strong>get</strong> price of item ==&gt; item_price
+2. <strong>set</strong> tax rate (kor = 0.1, jap = 0.08, usa = &ldquo;depend on state&rdquo;, uk = 0.2)
+3. <strong>get</strong> contry code(example: kor, jap, usa, uk) ==&gt; country_code
+4. tax_rate is matched price with country_code
+5. sales tax is item_price <strong>times</strong> tax rate
+6. total price is item_price <strong>plus</strong> sales tax</p>
+
+<hr />
+
+<h2 id="algorithm">Algorithm</h2>
+
+<blockquote>
+<p>is a series of contained steps which you follow in order to achieve some goal, or to produce some output.</p>
+</blockquote>
+
+<ul>
+<li>input</li>
+<li>output ( result )</li>
+<li>clarity</li>
+<li>finite trial</li>
+<li>simplicity</li>
+</ul>
+
+<h3 id="time-complexity-big-o-notation">Time Complexity  &amp; Big O Notation</h3>
+
+<p><a href="https://en.wikipedia.org/wiki/Time_complexity">wikipedia : time complexity</a>
+<a href="https://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/">what is Big  O  notation</a>
+<a href="http://bigocheatsheet.com/">Big-O Algorithm Complexity Cheat Sheet</a></p>
+
+<blockquote>
+<p><strong>Time Complexity</strong> is the computational complexity that measures or estimates the time taken for running an algorithm.</p>
+</blockquote>
+
+<p><img src="4FBD8E21-C067-459C-A277-A9F553648D1F.png" alt="" /></p>
+
+<blockquote>
+<p>time complexity is commonly expressed using <strong>big O notation</strong></p>
+</blockquote>
+
+<ul>
+<li>constant time / O(1)</li>
+<li>linear time / O(n)</li>
+<li>quasilinear time / O(n log n)</li>
+<li>quadratic time / O(n2)</li>
+<li>factorial time / O(n!)</li>
+</ul>
+
+<pre><code>	for ~
+ 		for ~
+
+loop nasting within loop is really bad!!
+</code></pre>
+
+<h3 id="sorting-algorithms">Sorting Algorithms</h3>
+
+<p><a href="https://en.wikipedia.org/wiki/Sorting_algorithm">wikipedia</a>
+<a href="https://brilliant.org/wiki/sorting-algorithms/">sorting-algorithms</a>
+<a href="https://www.geeksforgeeks.org/sorting-algorithms/">Sorting Algorithms - GeeksforGeeks</a></p>
+
+<blockquote>
+<p>arrange systematically in groups;<br />
+separate according to type, class, etc.<br />
+is an algorithm that puts elements of a list in a <strong>certain order</strong></p>
+</blockquote>
+
+<p>A sorted array is an array that is in a <strong>particular order</strong>.
+<em>[a, b, c, d]</em> is sorted alphabetically,  <em>[1, 2, 3, 4, 5]</em> is a list of integers sorted in increasing order, and <em>[5, 4, 3, 2, 1]</em> is a list of integers sorted in decreasing order.</p>
+
+<blockquote>
+<p>There are two broad types of sorting algorithms: integer sorts and comparison sorts.<br />
+Comparison sorts are usually more straightforward to implement than integer sorts, but comparison sorts are limited by a lower bound of , meaning that, on average, comparison sorts cannot be faster than . A lower bound for an algorithm is the worst-case running time of the best possible algorithm for a given problem. The &ldquo;on average&rdquo; part here is important: there are many algorithms that run in very fast time if the inputted list is already sorted, or has some very particular (and overall unlikely) property. There is only one permutation of a list that is sorted, but  possible lists, the chances that the input is already sorted is very unlikely, and on average, the list will not be very sorted.</p>
+</blockquote>
+
+<h3 id="common-sorting-algorithms">Common Sorting Algorithms</h3>
+
+<p>(정렬알고리즘)</p>
+
+<ul>
+<li><p>Bubble Sort
+<strong>Obama</strong>
+comparison-based / simple but slow
+(book example : one book at a time 순서대로 하나씩)</p>
+
+<pre><code>-&gt; 6 5 3 1 / 6과 5를 비교
+-&gt; 5 6 3 1 / 5가 앞으로 이동 &amp; 6과 3 비교
+-&gt; 5 3 6 1 / 6 과 1비교
+-&gt; 5 3 1 6
+-&gt; 3 5 1 6
+-&gt; 3 1 5 6
+-&gt; 1 3 5 6
+</code></pre></li>
+
+<li><p>Insertion Sort
+comparison-based algorithm
+builds a final sorted array one element at a time
+(앞에서 부터 순서대로 비교해 나감)</p>
+
+<pre><code>-&gt; 6 5 3 1 / 6과 5를 비교
+-&gt; 5 6 3 1 / 5가 앞으로 이동 &amp; 56과 3 비교
+-&gt; 3 5 6 1 / 356 과 1비교
+-&gt; 1 3 5 6
+</code></pre></li>
+
+<li><p>MergeSort
+comparison-based algorithm
+<strong>Divide and Conquer algorithm</strong>
+focuses on how to merge together two pre-sorted arrays such that the resulting array is also sorted.</p></li>
+
+<li><p>Quicksort
+comparison-based algorithm
+<strong>Divide and Conquer algorithm</strong>
+<strong>pivot element</strong></p></li>
+
+<li><p>Heapsort</p></li>
+
+<li><p>Counting Sort
+integer sorting algorithm</p></li>
+</ul>
+
+<hr />
+
+<h3 id="data-structure">Data Structure</h3>
+
+<ul>
+<li>stack  - LIFO</li>
+<li>queue - FIFO</li>
+<li>linked list</li>
+<li>binary trees</li>
+<li>heaps</li>
+</ul>
+
+<hr />
+
+<h1 id="tl-dr">TL;DR</h1>
+
+<ul>
+<li>What is computer?
+computer is a “savable calculator”</li>
+<li>difference between computer &amp; calculator</li>
+<li>computational thinking</li>
+<li>pseudo code</li>
+<li>algorithm</li>
+<li>data structure</li>
+<li><a href="http://www.hackerrank.com">HackerRank</a></li>
+<li>sort algorithm : quick sort</li>
+<li>data structure : stack / queue</li>
+<li><a href="http://rankedin.kr/users">한국 오픈소스 개발자 커뮤니티 - ranked.in</a></li>
+<li><a href="https://guides.github.com/features/mastering-markdown/">Mastering Markdown · GitHub Guides</a></li>
+</ul>
+
+<hr />
+
+<h1 id="self-study">Self Study</h1>
+
+<ul>
+<li>what is LOG?
+<img src="Screen%20Shot%202018-01-10%20at%2009.49.37.png" alt="" /></li>
+</ul>
+
+<h3 id="algorithms-to-live-by">Algorithms to live by</h3>
+
+                </section>
+            </article>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'yogicat'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/nodejh">
+        <i class="fa fa-facebook-square"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.github.com/nodejh">
+        <i class="fa fa-github-square"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2018 <i class="fa fa-heart" aria-hidden="true"></i> dahe oh
+    
+    </p>
+    
+</footer>
+
+        </section>
+
+        <script src="/js/jquery-2.2.4.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'your_google_analytics_id', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+    </body>
+</html>

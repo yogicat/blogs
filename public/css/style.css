@@ -130,19 +130,20 @@ h1 {
 }
 
 h2 {
-    font: italic 19px/1.3em Georgia, serif;
+    font: 19px/1.3em Georgia, serif;
     color: #bbb;
 }
 
 .profile #wrapper {
-    padding: 60px 40px 0px;
-    max-width: 600px;
-    margin: 0 auto;
+    /* padding: 60px 40px 0px; */
+    max-width: 100%;
+    margin-left: 60px;
+    height: 300px;
 }
 
 .profile #header {
     margin-bottom: 60px;
-    text-align: center;
+    text-align: left;
     position: relative;
 }
 
@@ -168,13 +169,14 @@ h2 {
     margin-top: 10px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-style: normal;
+    margin-top: 0;
 }
 
 nav.main-nav {
     padding: 20px 20px 0;
     background: #fff;
     background: rgba(255, 255, 255, .90);
-    margin: 0 auto;
+    margin: 0 0 0 40px;
     text-align: right;
     z-index: 100;
 }
@@ -183,15 +185,15 @@ nav.main-nav a {
     top: 8px;
     right: 6px;
     padding: 8px 12px;
-    color: #5badf0;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.35;
     border-radius: 3px;
 }
 
+
 nav.main-nav a.cta {
     background: #5badf0;
-    color: #fff;
+    color: #333;
     margin-left: 12px;
 }
 @media (max-width: 700px) {
@@ -207,7 +209,7 @@ nav.main-nav a.cta {
       top: 8px;
       right: 6px;
       padding: 8px 8px;
-      color: #5badf0;
+      color: #333;
       font-size: 13px;
       line-height: 1.35;
       border-radius: 3px;
@@ -220,15 +222,15 @@ nav.main-nav a.cta {
 }
 
 #wrapper {
-    max-width: 600px;
+    max-width: 640px;
     margin: 0 auto;
-    padding: 60px 20px 100px 20px;
+    padding: 60px 20px 100px 10px;
 }
 
 #wrapper.home {
-    max-width: 600px;
+    max-width: 640px;
     margin: 0 auto;
-    padding: 0px 40px 20px 40px;
+    /* padding: 0px 40px 20px 40px;     */
 }
 
 .home #avatar {
@@ -246,12 +248,11 @@ nav.main-nav a.cta {
 
 a, #title, #post-list a:hover, #title:hover {
     text-decoration: none;
-    color: #5badf0;
-    color: #5694f1;
+    color: rgb(59, 190, 114);
 }
 
 p a {
-    color: #5694f1;
+    color: rgb(59, 190, 114);
 }
 
 
@@ -632,6 +633,7 @@ Post List
 #post-nav span .arrow {
     position: relative;
     padding: 1px;
+
 }
 
 #post-nav span.prev:hover .arrow {
@@ -686,7 +688,7 @@ h2.month {
 }
 
 #archive-list li a:hover, #archive-list li:hover .dates {
-    color: #5694f1;
+    color: #bbb;
 }
 
 #post-meta img.avatar {
@@ -712,7 +714,7 @@ h2.month {
 
 #post-list.archive.readmore a {
     font: 400 16px/1.6 "Helvetica Neue", helvetica, Arial, sans-serif;
-    color: #5694f1;
+    color: #333;
 }
 
 #post-list.archive.readmore a:hover {
@@ -823,11 +825,11 @@ h2.month {
 }
 
 .archive .post-item:hover {
-    color: #5694f1;
+    color: #bbb;
     transition: 0.3s ease-out;
 }
 .archive .post-item:hover .post-link {
-    color: #5694f1;
+    color: #333;
 }
 
 .fa.fa-heart:hover {
@@ -930,5 +932,5 @@ a.symbol:hover {
     font-size: .9em;
 }
 .page-tags ul li a:hover {
-    color: #5694f1;
+    color: #333;
 }
