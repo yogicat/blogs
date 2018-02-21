@@ -1,8 +1,9 @@
 
 ## To-do app practice repo
 
-trying bunch of unfiltered ideas and expreiments.
-To-do만들기 레포입니다. Todoist를 꿈꾸며 ..
+trying bunch of unfiltered ideas and experiment.
+
+To-do만들기 레포입니다. Todoist를 꿈꾸며.
 
 ---
 
