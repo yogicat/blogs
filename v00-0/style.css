@@ -28,13 +28,5 @@ li:hover {
     text-decoration: line-through;
 }
 
-li::before {
-  content: "o ";
-  color: salmon;
-}
 
-li::after {
-  content: "x";
-  color: darkcyan;
-}
 
