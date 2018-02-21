@@ -2,42 +2,40 @@
 var form = document.getElementById('addform');
 var itemList = document.getElementById('items');
 var filter = document.getElementById('filter');
+let newItem = document.getElementById('input-item');
+var todos = [];
+
+//  load todo
+window.addEventListener('load', function (e) {
+  todos = [
+    { id: 1, content: 'HTML', completed: false },
+    { id: 2, content: 'CSS', completed: false },
+    { id: 3, content: 'Javascript', completed: false }
+  ];
+  makeTodo(todos);
+});
 
 //  form submit event
 form.addEventListener('submit', addItem);
 //  check or delete item
 itemList.addEventListener('click', checkItem);
-
 //filter
 filter.addEventListener('keyup', filterItems);
 
 // add item
 function addItem(e) {
-  //  prevent initial behavior
-  e.preventDefault();
-  //  get input
-  let newItem = document.getElementById('item');
-  //  create new li element
-  const list = document.createElement('li');
-  //  get btn
-  const deleteBtn = document.createElement('button');
-
   if (!newItem.value) return;
-  //  add class
-  list.className = 'list-group-item';
+  //  prevent initial behavior - submit
+  e.preventDefault();
 
-  //  add text node
-  list.appendChild(document.createTextNode(newItem.value));
+  const newTodo = {
+    id: todos.length + 1,
+    content: newItem.value,
+    completed: false
+  };
+  todos = todos.concat(newTodo);
 
-  // create del btn
-  deleteBtn.className = 'btn';
-  deleteBtn.innerHTML = '<i class="far fa-times-circle"></i>';
-
-  //  add deleteBtn to li
-  list.appendChild(deleteBtn);
-
-  //  add li to itemList UL
-  itemList.appendChild(list);
+  makeTodo(todos);
 
   //  remove from form
   newItem.value = '';
@@ -48,8 +46,18 @@ function checkItem(e) {
   if (e.target.classList.contains('far')) {
     let li = e.target.parentElement.parentElement;
     itemList.removeChild(li);
+
+    todos = todos.filter(function (todo) {
+      return todo.id !== +li.id
+    });
+    makeTodo(todos);
   }
-  e.target.classList.add('done');
+   
+  e.target.classList.toggle('done');
+  todos = todos.map(function (item) {
+    return item.id === +e.target.id ? Object.assign({}, item, { completed: !item.completed }) : item;
+  });
+  console.log(todos);
 }
 
 //  filter items
@@ -67,5 +75,34 @@ function filterItems(e) {
     } else {
       item.style.display = 'none';
     }
+  });
+}
+
+//  make Todo
+function makeTodo(todos) {
+  //  check lis and redraw
+  if( itemList.hasChildNodes('li')) {
+    document.querySelectorAll('li').forEach(function (item) {
+      itemList.removeChild(item);
+    });
+  }
+  todos.forEach(function (item) {
+    //  create new li element
+    const list = document.createElement('li');
+    //  get btn
+    const deleteBtn = document.createElement('button');
+
+    //  add class
+    list.className = 'list-group-item';
+    //  add text node
+    list.appendChild(document.createTextNode(item.content));
+    list.setAttribute('id', item.id)
+
+    // create del btn
+    deleteBtn.className = 'btn';
+    deleteBtn.innerHTML = '<i class="far fa-times-circle"></i>';
+    //  add deleteBtn to li
+    list.appendChild(deleteBtn);
+    itemList.appendChild(list);
   });
 }
