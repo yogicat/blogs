@@ -124,6 +124,7 @@ form {
 
 .submit {
   width: 90px;
+  background: transparent;
 }
 
 .list-group {
