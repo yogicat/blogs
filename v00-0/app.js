@@ -2,39 +2,31 @@ var input = document.querySelector('#input-todo');
 var todoList = document.querySelector('#todo-list');
 var todos = [];
 
-function resetTodo(todos) {
-  if (document.hasChildNodes('li')) {
-    document.querySelectorAll('li').forEach((item) => {
-      todoList.removeChild(item);
-    });
-  }
-  todos.forEach((todo, index) => {
-    const newTodo = document.createElement('li');
-    todoList.appendChild(newTodo);
-    newTodo.innerHTML = todo.content;
-    newTodo.setAttribute('id', todo.id);
+function resetTodo() {
+  todoList.innerHTML = '';
+
+  todos.forEach(function (todo) {
+  todoList.innerHTML += '<li id="' + todo.id + '">' + todo.content + '</li>';
   });
 }
 
-input.addEventListener('keyup', (e) => {
-  if (e.keyCode !== 13) return;
-  if (todos && input.value) {
-    const newTodo = {
-      id: todos.length + 1,
-      content: input.value,
-      completed: false
-    };
-    todos = todos.concat(newTodo);
 
-    resetTodo(todos);
-    input.value = '';
-  }
+// Arrow function의 매개변수가 하나일 경우, () 생략
+input.addEventListener('keyup', e => {
+  if (e.keyCode !== 13 || !input.value) return;
+
+  // TODO: id 채번 방법을 다시 한번 생각해 보기!
+  todos = todos.concat({ id: todos.length + 1, content: input.value, completed: false });
+  input.value = '';
+
+  resetTodo();
 });
 
 
-todoList.addEventListener('click', (e) => {
-  todos = todos.filter((todo) => todo.id !== +e.target.getAttribute('id'));
-  resetTodo(todos);
+
+todoList.addEventListener('click', e => {
+  todos = todos.filter(todo => todo.id !== +e.target.id);
+  resetTodo();
 });
 
 
@@ -44,6 +36,6 @@ window.addEventListener('load', () => {
     { id: 2, content: 'CSS', completed: true },
     { id: 3, content: 'Javascript', completed: false }
   ];
-  resetTodo(todos);
+  // resetTodo(todos);
+  resetTodo();
 });
-

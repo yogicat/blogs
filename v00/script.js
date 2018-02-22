@@ -12,14 +12,14 @@ window.addEventListener('load', function (e) {
     { id: 2, content: 'CSS', completed: false },
     { id: 3, content: 'Javascript', completed: false }
   ];
-  makeTodo(todos);
+  makeTodo();
 });
 
 //  form submit event
 form.addEventListener('submit', addItem);
 //  check or delete item
 itemList.addEventListener('click', checkItem);
-//filter
+//  filter
 filter.addEventListener('keyup', filterItems);
 
 // add item
@@ -35,7 +35,7 @@ function addItem(e) {
   };
   todos = todos.concat(newTodo);
 
-  makeTodo(todos);
+  makeTodo();
 
   //  remove from form
   newItem.value = '';
@@ -50,7 +50,7 @@ function checkItem(e) {
     todos = todos.filter(function (todo) {
       return todo.id !== +li.id
     });
-    makeTodo(todos);
+    makeTodo();
   }
    
   e.target.classList.toggle('done');
@@ -79,7 +79,7 @@ function filterItems(e) {
 }
 
 //  make Todo
-function makeTodo(todos) {
+function makeTodo() {
   //  check lis and redraw
   if( itemList.hasChildNodes('li')) {
     document.querySelectorAll('li').forEach(function (item) {
