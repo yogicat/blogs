@@ -46,15 +46,31 @@ function toggleTodo(id) {
 
 window.addEventListener('load', function () {
   //  database server 에서 todos 배열을 가져온다
-  todos =[
-    { id: 1, content: 'HTML', completed: false },
-    { id: 2, content: 'CSS', completed: true },
-    { id: 3, content: 'Javascript', completed: false }
-  ];
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'http://localhost:3000/todos');
+  xhr.send();
 
-  render();
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        console.log(xhr.responseText);
+        todos = JSON.parse(xhr.responseText);
+        render();
+      } else {
+        console.log(xhr.statusText);
+      }
+    }
+  };
 
-})
+  // todos =[
+  //   { id: 1, content: 'HTML', completed: false },
+  //   { id: 2, content: 'CSS', completed: true },
+  //   { id: 3, content: 'Javascript', completed: false }
+  // ];
+
+  // render();
+
+});
 
 inputTodo.addEventListener('keyup', function (e) {
   if (e.keyCode !== 13 || !this.value) return;
