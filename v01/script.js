@@ -1,5 +1,11 @@
 var inputTodo = document.getElementById('input-todo');
 var listGroup = document.getElementById('todo-list');
+
+
+var allBtn = document.getElementById('select-all');
+var activeBtn = document.getElementById('select-active');
+var compeletedBtn = document.getElementById('select-completed');
+var showAllBtn = document.getElementById('show-all');
 var todos = [];
 
 function makeTodo() {
@@ -11,7 +17,7 @@ function makeTodo() {
               <a class="hover-action text-muted">
                 <span class="glyphicon glyphicon-remove-circle pull-right" data-id="${todo.id}"></span>
               </a>
-              <label class="i-checks" for="1">
+              <label class="i-checks" for="${todo.id}">
                 <input type="checkbox" id="${todo.id}" ${todo.completed ? 'checked' : ''}><i></i>
                 <span>${todo.content}</span>
               </label>
@@ -33,12 +39,47 @@ function getTodo(e) {
   this.value = '';
 }
 
-function updateTodo(e) {
-  console.log(e.target);
+function toggleTodo(e) {
+  todos = todos.map(function (todo) {
+    return todo.id === +e.target.id ? Object.assign({}, todo, { completed: !todo.completed }) : todo;
+  });
+  makeTodo();
 }
 
+function removeTodo(id) {
+  todos = todos.filter(todo => todo.id !== +id);
+  makeTodo();
+}
+
+function updateTodo(e) {
+  if (e.target.classList.contains('glyphicon')) {
+    removeTodo(e.target.dataset.id);
+  }
+}
+
+function allTodo() {
+  todos = todos.map(todo => Object.assign({}, todo, {completed: true }));
+  makeTodo();
+}
+
+// function showTodo() {
+//   var listItems = document.getElementsByClassName('list-group-item');
+//   var activeTodos = todos.filter(todo => todo.completed == false);
+//   activeTodos = activeTodos.map(todo => todo.id);
+//   Array.from(listItems).forEach(function (item) {
+//     var name = item.firstElementChild.lastElementChild.firstElementChild.id;
+//     item.style.display = 'block';
+//   })
+// }
+
+
 inputTodo.addEventListener('keyup', getTodo);
+listGroup.addEventListener('change', toggleTodo);
 listGroup.addEventListener('click', updateTodo);
+allBtn.addEventListener('click', allTodo);
+
+activeBtn.addEventListener('click', showTodo);
+compeletedBtn.addEventListener('click', showTodo);
 
 window.addEventListener('load', function () {
   todos = [
