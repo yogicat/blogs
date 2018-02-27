@@ -1,16 +1,32 @@
-var inputTodo = document.getElementById('input-todo');
-var listGroup = document.getElementById('todo-list');
-
-
-var allBtn = document.getElementById('select-all');
-var activeBtn = document.getElementById('select-active');
-var compeletedBtn = document.getElementById('select-completed');
-var showAllBtn = document.getElementById('show-all');
-var todos = [];
+let inputTodo = document.getElementById('input-todo');
+let listGroup = document.getElementById('todo-list');
+let btnGroup = document.querySelector('.nav');
+let markAll = document.getElementById('chk-allComplete');
+let clearBtn = document.getElementById('btn-removeCompletedTodos');
+let status = 'all';
+let todos = [];
 
 function makeTodo() {
-  var html = '';
-  todos.forEach((todo) => {
+  let html = '';
+  let countTodo = 0;
+
+  var filterTodos = todos.filter(function (todo) {
+    switch (status) {
+      case 'all':
+        return todo;
+        break;
+      case 'active':
+        return todo.completed == false;
+        break;
+      case 'completed':
+        return todo.completed == true;
+        break;
+      default:
+        return todo;
+    }
+  });
+
+  filterTodos.forEach((todo) => {
     html +=
       `<li class="list-group-item">
             <div class="hover-anchor">
@@ -24,9 +40,14 @@ function makeTodo() {
             </div>
           </li>`;
   });
+
   listGroup.innerHTML = html;
-  console.table(todos);
+  countTodo = todos.filter(todo => todo.completed === true);
+  document.getElementById('completedTodos').textContent = `${countTodo.length} `;
+  document.getElementById('activeTodos').textContent = `${todos.length - countTodo.length}`;
+  todos.length - countTodo.length <= 1 ? document.getElementById('activeTodos').nextSibling.nodeValue = ' item left' : 'items left';
 }
+
 
 function getTodo(e) {
   if (!this.value || e.keyCode !== 13) return;
@@ -46,40 +67,38 @@ function toggleTodo(e) {
   makeTodo();
 }
 
-function removeTodo(id) {
-  todos = todos.filter(todo => todo.id !== +id);
-  makeTodo();
-}
-
-function updateTodo(e) {
+function removeTodo(e) {
   if (e.target.classList.contains('glyphicon')) {
-    removeTodo(e.target.dataset.id);
+    todos = todos.filter(todo => todo.id !== +e.target.dataset.id);
+    makeTodo();
   }
 }
 
-function allTodo() {
-  todos = todos.map(todo => Object.assign({}, todo, {completed: true }));
-  makeTodo();
-}
-
-// function showTodo() {
-//   var listItems = document.getElementsByClassName('list-group-item');
-//   var activeTodos = todos.filter(todo => todo.completed == false);
-//   activeTodos = activeTodos.map(todo => todo.id);
-//   Array.from(listItems).forEach(function (item) {
-//     var name = item.firstElementChild.lastElementChild.firstElementChild.id;
-//     item.style.display = 'block';
-//   })
-// }
-
-
 inputTodo.addEventListener('keyup', getTodo);
 listGroup.addEventListener('change', toggleTodo);
-listGroup.addEventListener('click', updateTodo);
-allBtn.addEventListener('click', allTodo);
+listGroup.addEventListener('click', removeTodo);
 
-activeBtn.addEventListener('click', showTodo);
-compeletedBtn.addEventListener('click', showTodo);
+// 추가 버튼 이벤트
+//  전체완료
+markAll.addEventListener('change', function (e) {
+  todos = todos.map(todo => Object.assign({}, todo, { completed: this.checked }));
+  makeTodo();
+});
+
+//  toggle status (all, active, completed선택)
+btnGroup.addEventListener('click', function (e) {
+  Array.from(this.children).forEach(li => li.removeAttribute('class'));
+  e.target.parentNode.classList.add('active');
+  status = e.target.parentNode.id;
+  makeTodo();
+});
+
+// remove completed items
+clearBtn.addEventListener('click', function(e) {
+  id = todos.filter(todo => todo.completed == true).map(todo => todo.id);
+  id.forEach( item => removeTodo(item));
+});
+
 
 window.addEventListener('load', function () {
   todos = [
