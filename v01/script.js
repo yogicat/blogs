@@ -16,10 +16,10 @@ function makeTodo() {
         return todo;
         break;
       case 'active':
-        return todo.completed == false;
+        return todo.completed === false;
         break;
       case 'completed':
-        return todo.completed == true;
+        return todo.completed === true;
         break;
       default:
         return todo;
