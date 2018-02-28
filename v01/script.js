@@ -95,8 +95,8 @@ btnGroup.addEventListener('click', function (e) {
 
 // remove completed items
 clearBtn.addEventListener('click', function(e) {
-  id = todos.filter(todo => todo.completed == true).map(todo => todo.id);
-  id.forEach( item => removeTodo(item));
+  todos = todos.filter(todo => !todo.completed);
+  makeTodo();
 });
 
 
