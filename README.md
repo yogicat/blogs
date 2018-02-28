@@ -5,6 +5,11 @@ trying bunch of unfiltered ideas and experiment.
 To-do만들기 레포입니다.
 
 
+---
+
+#### 버전 2.0
+- 링크 [verson 2.001](https://yogicat.github.io/todos/v01-0/)
+- 스터디 버전
 
 ---
 
@@ -27,7 +32,7 @@ To-do만들기 레포입니다.
 
 #### 버전 0.1
 - 링크 [verson 0.001](https://yogicat.github.io/todos/v00/)
-- Self Study Version
+- 스터디 버전
 
 ---
 
