@@ -7,7 +7,7 @@ const allBtn = document.getElementById('all');
 const activeBtn = document.getElementById('active');
 const completedBtn = document.getElementById('completed');
 const clearBtn = document.getElementById('btn-removeCompletedTodos');
-const markAllBtn = document.querySelector('.i-checks');
+const markAllBtn = document.querySelector('#chk-allComplete');
 let currentStatus = 'all';
 
 function makeTodo() {
@@ -94,7 +94,7 @@ function removeTodo(e) {
 }
 
 function markAll() {
-  todos = todos.map(todo => Object.assign({}, todo, { completed: true }));
+  todos = todos.map(todo => Object.assign({}, todo, { completed: this.checked }));
   makeTodo();
 }
 
