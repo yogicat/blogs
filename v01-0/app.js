@@ -50,7 +50,8 @@ function makeTodo() {
 
 function getID() {
   //  todos에 하나도 없으면  1, 아니면 계산
-  return todos.length <= 0 ? 1 : Math.max.apply(null, todos.map(todo => todo.id)) + 1;
+  let newID = todos.length <= 0 ? 1 : Math.max.apply(null, todos.map(todo => todo.id)) + 1;
+  return newID;
 }
 
 function getTodo(e) {
@@ -96,6 +97,10 @@ function removeTodo(e) {
 function markAll() {
   todos = todos.map(todo => Object.assign({}, todo, { completed: this.checked }));
   makeTodo();
+}
+
+function markAll2() {
+  todos = todos.map(todo => ({ ...todo, completed: false }));
 }
 
 todoList.addEventListener('change', updateTodo);
