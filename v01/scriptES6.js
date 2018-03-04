@@ -6,31 +6,33 @@
   const markAll = document.getElementById('chk-allComplete');
   const clearBtn = document.getElementById('btn-removeCompletedTodos');
 
-  const status = 'all';
+  let status = 'all';
   let todos = [];
 
-  // const filterTodos = todos.filter((todo) => {
-  //   switch (status) {
-  //     case 'all':
-  //       return todo;
-  //       break;
-  //     case 'active':
-  //       return todo.completed === false;
-  //       break;
-  //     case 'completed':
-  //       return todo.completed === true;
-  //       break;
-  //     default:
-  //       return todo;
-  //   }
-  // });
+  let filterTodos = function () {
+    return todos.filter((todo) => {
+      switch (status) {
+        case 'all':
+          return todo;
+          break;
+        case 'active':
+          return todo.completed === false;
+          break;
+        case 'completed':
+          return todo.completed === true;
+          break;
+        default:
+          return todo;
+      }
+    });
+  };
 
 
-  const makeTodo = function makeTodo() {
+  let makeTodo = function () {
     let html = '';
     let countTodo = 0;
 
-
+    filterTodos();
     filterTodos.forEach((todo) => {
       html +=
         `<li class="list-group-item">
@@ -54,7 +56,7 @@
   }
 
 
-  function getTodo(e) {
+  let getTodo = function (e) {
     if (!this.value || e.keyCode !== 13) return;
     todos = todos.concat({
       id: Math.max.apply(null, todos.map(item => item.id)) + 1,
@@ -66,7 +68,7 @@
   }
 
   function toggleTodo(e) {
-    todos = todos.map(function (todo) {
+    todos = todos.map((todo) => {
       return todo.id === +e.target.id ? Object.assign({}, todo, { completed: !todo.completed }) : todo;
     });
     makeTodo();
