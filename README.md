@@ -4,6 +4,14 @@
 trying bunch of unfiltered ideas and experiment.
 To-do만들기 레포입니다.
 
+---
+
+#### 버전 3.0
+- 링크 [verson 3.000](https://yogicat.github.io/todos/v03/)
+- webpack 연동
+- database 연동
+
+
 
 ---
 
