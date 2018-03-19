@@ -4,6 +4,14 @@
 trying bunch of unfiltered ideas and experiment.
 To-do만들기 레포입니다.
 
+
+---
+
+#### 버전 4.0
+- angular version
+- sass , css 프레임워크(bulma) 사용
+
+
 ---
 
 #### 버전 3.0
