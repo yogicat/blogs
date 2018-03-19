@@ -1,0 +1,47 @@
+section {
+  padding: 1rem 1.5rem;
+}
+
+.control {
+  cursor: pointer;
+}
+.my-button {
+  cursor: pointer;
+}
+.notification {
+  margin-bottom: 0.3rem;
+  cursor: pointer;
+}
+
+.my-tag-left {
+  padding: 0 1.3rem;
+}
+
+.my-input {
+  margin-right: 6px;
+}
+
+.my-control-group{
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+@keyframes checking {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.is-dark.is-done {
+  color: grey;
+  opacity: 0.5;
+  animation: chceking 1s; 
+}
+
+.is-info {
+  color: white;
+  opacity: 1;
+}

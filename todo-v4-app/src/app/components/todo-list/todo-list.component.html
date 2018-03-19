@@ -1,0 +1,7 @@
+<div class="notification" [ngClass]="todo.completed ? 'is-dark is-done' : 'is-info'">
+  <div class="input-group" (click)="onCheck()">
+    <input type="checkbox" class="checkbox my-input" [checked]="todo.completed">
+    <span>{{ todo.content }}</span>
+  </div>
+  <button class="delete" (click)="onDelete()"></button>
+</div>

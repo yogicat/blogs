@@ -1,0 +1,13 @@
+<div class="field is-grouped my-control-group">
+  <div class="control">
+    <div class="tags">
+      <span class="tag is-light">
+        <input type="checkbox" class="checkbox my-input" [checked]="checkStatus"  (click)="onToggle()"> mark all</span>
+    </div>
+  </div>
+  <div class="control" (click)="deleteCompleted()">
+    <div class="tags">
+      <span class="tag is-light">delete {{ getNum }} {{ getNum > 1 ? ' items' : ' item'}}</span>
+    </div>
+  </div>
+</div>
