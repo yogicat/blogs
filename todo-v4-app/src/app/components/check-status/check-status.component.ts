@@ -7,13 +7,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class CheckStatusComponent implements OnInit {
   @Input()
-  st: string[];
+  currentStatus: string[];
 
   @Input()
   selected: string;
 
   @Output()
-  onselected: EventEmitter<any> = new EventEmitter();
+  onselected: EventEmitter<string[]> = new EventEmitter<string[]>();
 
   // defaultselected: 'all';
   constructor() { }
@@ -22,8 +22,7 @@ export class CheckStatusComponent implements OnInit {
   }
 
   sendStatus(): void {
-    // selected = st;
-    this.onselected.emit(this.st);
+    this.onselected.emit(this.currentStatus);
   }
 
 }

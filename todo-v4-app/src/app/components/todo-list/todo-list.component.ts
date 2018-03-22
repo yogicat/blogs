@@ -12,10 +12,10 @@ export class TodoListComponent implements OnInit {
   todo: ITodo;
 
   @Output()
-  checks: EventEmitter<any> = new EventEmitter();
+  checks: EventEmitter<ITodo> = new EventEmitter<ITodo>();
 
   @Output()
-  delete: EventEmitter<any> = new EventEmitter();
+  delete: EventEmitter<ITodo> = new EventEmitter<ITodo>();
 
   constructor() { }
 

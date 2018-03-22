@@ -1,22 +1,36 @@
 <section class="section">
   <div class="container">
-    <app-todo-input (make)="makeTodo($event)"></app-todo-input>
+    <app-todo-input 
+      (make)="makeTodo($event)">
+    </app-todo-input>
   </div>
 </section>
 
 <section class="section">
   <div class="field is-grouped">
     <!-- todo cards -->
-    <app-check-status *ngFor="let st of status" 
-      [st]="st" [selected]="selected" (onselected)="getStatus($event)"></app-check-status>
+    <app-check-status 
+      *ngFor="let currentStatus of status" 
+      [currentStatus]="currentStatus" 
+      [selected]="selected" 
+      (onselected)="getStatus($event)">
+    </app-check-status>
   </div>
 
   <!-- todo list -->
   <div class="container">
-    <app-todo-list *ngFor="let todo of todos | status: selected" 
-      [todo]="todo" (checks)="checkTodo($event)" (delete)="deleteTodo($event)"></app-todo-list>
+    <app-todo-list 
+      *ngFor="let todo of todos | status: selected" 
+      [todo]="todo" 
+      (checks)="checkTodo($event)" 
+      (delete)="deleteTodo($event)">
+    </app-todo-list>
   </div>
 
-  <app-buttons [completedNumber]="getCompNum()" (toggleAll)="toggleAll()" (deleteAll)="deleteCompleted()"></app-buttons>
+  <app-buttons 
+    [completedNumber]="getCompNum()" 
+    (toggleAll)="toggleAll()" 
+    (deleteAll)="deleteCompleted()">
+  </app-buttons>
 
 </section>

@@ -1,7 +1,9 @@
 section {
   padding: 1rem 1.5rem;
 }
-
+.section {
+  padding: 1rem;
+}
 .control {
   cursor: pointer;
 }
@@ -11,6 +13,7 @@ section {
 .notification {
   margin-bottom: 0.3rem;
   cursor: pointer;
+  padding: 1rem 2.5rem 1rem 1.5rem;
 }
 
 .my-tag-left {

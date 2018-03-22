@@ -1,7 +1,11 @@
 <div class="field">
   <p class="control">
     <input 
-      class="input is-medium" type="text" placeholder="input todo" 
-      autofocus (keyup.enter)="sendTodo()" [(ngModel)]="content">
+      class="input is-medium" 
+      type="text" 
+      placeholder="input todo" 
+      autofocus 
+      (keyup.enter)="onEnter()" 
+      [(ngModel)]="content">
   </p>
 </div>

@@ -7,10 +7,10 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 })
 export class ButtonsComponent implements OnInit {
   @Output()
-  toggleAll: EventEmitter<any> = new EventEmitter();
+  toggleAll: EventEmitter<void> = new EventEmitter<void>();
 
   @Output()
-  deleteAll: EventEmitter<any> = new EventEmitter();
+  deleteAll: EventEmitter<void> = new EventEmitter<void>();
 
   @Input()
   completedNumber: number;
@@ -20,11 +20,11 @@ export class ButtonsComponent implements OnInit {
   ngOnInit() {
   }
 
-  onToggle() {
+  onToggle(): void {
     this.toggleAll.emit();
   }
 
-  deleteCompleted() {
+  deleteCompleted(): void {
     this.deleteAll.emit();
   }
 

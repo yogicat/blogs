@@ -7,7 +7,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class TodoInputComponent implements OnInit {
   @Output()
-  make: EventEmitter<any> = new EventEmitter();
+  make: EventEmitter<string> = new EventEmitter<string>();
 
   content: string;
   constructor() { }
@@ -15,7 +15,8 @@ export class TodoInputComponent implements OnInit {
   ngOnInit() {
   }
 
-  sendTodo(): void {
+  onEnter(): void {
+    if (!this.content) { return; }
     this.make.emit(this.content);
     this.content = '';
   }
