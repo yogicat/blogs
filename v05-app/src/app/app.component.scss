@@ -1,0 +1,39 @@
+.button {
+  margin: 0 10px;
+}
+
+[tooltipDirective] {
+  position: relative;
+}
+
+// .tooltip {
+//   position: absolute;
+//   bottom: 100%;
+//   left: 0;
+//   padding: 10px;
+//   background: #fff;
+//   box-shadow: 0 2px 1px rgba(0,0,0,.6);
+// }
+
+.commentTip {
+		position: absolute;
+		top: 0;
+		left: 0;
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    top: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: block;
+    left: auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    width: 140px;
+		margin: -20px 0 0 -120px;
+		-webkit-animation: bounce 3s infinite;
+    animation: bounce 3s infinite;
+    font-size: 10px;
+}

@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  condition = false;
+  buttonName = [
+    { name: 'top' },
+    { name: 'bottom'},
+    { name : 'left'}
+  ];
+
+  showTips(target) {
+    console.log(target);
+  }
+
+  hideTips(target) {
+    console.log(target);
+  }
+
+
 }
