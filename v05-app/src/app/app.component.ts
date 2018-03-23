@@ -1,26 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
+import { TooltipDirective } from './tooltip.directive';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
-  condition = false;
-  buttonName = [
-    { name: 'top' },
-    { name: 'bottom'},
-    { name : 'left'}
-  ];
+  newPosition: string;
 
-  showTips(target) {
-    console.log(target);
+  @ViewChild(TooltipDirective)
+  set position(directive: TooltipDirective) {
+    // this.newPosition = directive
+    console.log(directive);
   }
-
-  hideTips(target) {
-    console.log(target);
-  }
-
 
 }
